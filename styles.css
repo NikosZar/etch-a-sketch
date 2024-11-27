@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, h6 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+}
+
+header {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.grid-container {
+    display:flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    justify-content: center;
+
+}
+
+.grid {
+    width: min(90vw,90vh); /* Take up 90% of viewport width or height, whichever is smaller */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    aspect-ratio: 1 / 1; /* force square container */
+}
+
+.gridSquare {
+    border: 1px solid black;
+    width: calc(100% / var(--grid-size, 16)); /* Use CSS variable with fallback */
+    height: calc(100% / var(--grid-size, 16)); /* Use CSS variable with fallback */
+    flex: 0 0 auto; /* Use CSS variable with fallback */
+}
+
+.button-container {
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.button {
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.2em;  /* Add this */
+    min-width: 120px;  /* Add this */
+    cursor: pointer;   /* Add this */
+    background-color: #4CAF50;  /* Add this */
+    color: white;      /* Add this */
+    border: none;      /* Add this */
+    border-radius: 5px;  /* Add this */
+}
+
+.button:hover {  /* Add this */
+    background-color: #45a049;
+}
